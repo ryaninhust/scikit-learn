@@ -32,6 +32,7 @@ __all__ = ['BernoulliNB', 'GaussianNB', 'MultinomialNB']
 
 
 class BaseNB(six.with_metaclass(ABCMeta, BaseEstimator, ClassifierMixin)):
+
     """Abstract base class for naive Bayes estimators"""
 
     @abstractmethod
@@ -98,6 +99,7 @@ class BaseNB(six.with_metaclass(ABCMeta, BaseEstimator, ClassifierMixin)):
 
 
 class GaussianNB(BaseNB):
+
     """
     Gaussian Naive Bayes (GaussianNB)
 
@@ -187,6 +189,7 @@ class GaussianNB(BaseNB):
 
 
 class BaseDiscreteNB(BaseNB):
+
     """Abstract base class for naive Bayes on discrete/categorical data
 
     Any estimator based on this class should provide:
@@ -276,6 +279,7 @@ class BaseDiscreteNB(BaseNB):
 
 
 class MultinomialNB(BaseDiscreteNB):
+
     """
     Naive Bayes classifier for multinomial models
 
@@ -352,6 +356,7 @@ class MultinomialNB(BaseDiscreteNB):
 
 
 class BernoulliNB(BaseDiscreteNB):
+
     """Naive Bayes classifier for multivariate Bernoulli models.
 
     Like MultinomialNB, this classifier is suitable for discrete data. The
